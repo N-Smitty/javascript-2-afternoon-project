@@ -28,6 +28,9 @@
 */
 
 // Code Here 
+const first = (arr, cb) => {
+  return cb(arr[0]) 
+}
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -48,6 +51,9 @@ first(names, function(firstName){
 */
 
 //Code Here
+const last = (arr, cb) => {
+  return cb(arr[arr.length -1])
+};
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -66,7 +72,9 @@ last(names, function(lastName){
 */
 
 //Code Here
-
+const multiply = (num1, num2, cb) => {
+  return cb(num1*num2)
+};
 // Do not edit the code below.
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
@@ -85,7 +93,14 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
-
+const contains = (arr, name, cb) => {
+  if (arr.indexOf(name) >=0) {
+    return cb(true)
+  }
+  else {
+   return cb(false)
+  }
+};
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
   if(result === true){
@@ -106,6 +121,9 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+const uniq = (arr, cb) => {
+
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){

@@ -19,8 +19,9 @@ var arr = [10,20,30];
 
 //Code Here
 
-
-
+function first(arr) {
+  return arr[0];
+}
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -33,7 +34,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+function last(arr) {
+  return arr[arr.length -1];
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -48,9 +51,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
-
-
+function looper(family) {
+  for(var i = 0; 1 < family.length; i++) {
+  alert(family[i]);
+  }
+}
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -63,9 +68,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
-
-
+// function reversedLooper
+// (letters) {
+//   for(let i = letters.length -1; 
+//     i >= 0; 1 --) {
+//     alert(letters[i]);
+//   }
+// }
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
@@ -78,7 +87,23 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
+function evenFinder(nums){
+  let rArr = []
+  for (let i = 0; i < nums.length; i++){
+    if(nums[i] % 2 === 0){
+      rArr.push(nums[i])
+    }
+  }
+  return rArr
+}
 
+// function evenFinder(nums) {
+//   let arr = []
+//   for (let i = 0; i <
+// nums.length; i++) {
+//  if ((nums[i]) % 2 === 0 ) {
+//    arr.push (nums[1])
+// }
 
 
 
