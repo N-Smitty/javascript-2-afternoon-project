@@ -98,7 +98,7 @@ const contains = (arr, name, cb) => {
     return cb(true)
   }
   else {
-   return cb(false)
+  return cb(false)
   }
 };
 // Do not edit the code below.
@@ -121,10 +121,38 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
-const uniq = (arr, cb) => {
-
+function uniq (arr, cb) {
+  newArr = [];
+  for(i=0; i<=arr.length-1; i++) {
+    for(j=i+1; j<arr.length-2; j++) {
+      if(arr[i]===arr[j]) {
+        arr.splice(arr[i]);
+      }
+    }
+  }
+  cb(arr);
 }
 
+// function uniq(arr, cb) {
+
+//   for(let i = 0; i < arr.length; i++) {
+//     for(let m = arr.length -1; m > i; m--) {
+//       if(arr[i] === arr[m]) {
+//         arr.splice(m, 1)
+//       }
+//     }
+//   }
+//       cb(uniq)
+// }
+// const uniq = (arr, cb) => {
+//   let newArr = []
+//     for (let i= 0; i < arr.length; i++) {
+//       if (arr.indexOf(arr[1]) === i) {
+//         newArr.push(arr[1])
+//       }
+//     }
+//           return cb(newArr)         
+// }
 // Do not edit the code below.
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
@@ -141,6 +169,12 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
+var each = ( arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    cb(arr[i], arr.indexOf(arr[1]))
+  }
+
+}
 
 // Do not edit the code below.
 each(names, function(item, indice){
@@ -158,7 +192,14 @@ each(names, function(item, indice){
 */
 
 // Code here
+var getUserById = (arr, id, cb) => {
+  for (i = 0; i < arr.length; i++) {
+    if ( id === arr[i].id) {
+      return cb(arr[i])
+  }
+  }
 
+}
 // Do not edit the code below.
 var users = [
   {

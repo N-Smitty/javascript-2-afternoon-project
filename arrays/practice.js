@@ -52,7 +52,7 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
 //Code Here
 function looper(family) {
-  for(var i = 0; 1 < family.length; i++) {
+  for(let i = 0; i < family.length; i++) {
   alert(family[i]);
   }
 }
@@ -68,13 +68,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-// function reversedLooper
-// (letters) {
-//   for(let i = letters.length -1; 
-//     i >= 0; 1 --) {
-//     alert(letters[i]);
-//   }
-// }
+function reversedLooper
+(letters) {
+  for(let i = letters.length -1; 
+    i >= 0; i --) {
+    alert(letters[i]);
+  }
+}
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
@@ -86,7 +86,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return an array that contains the even numbers from the nums array.
 */
 
-//Code Here
+// //Code Here
 function evenFinder(nums){
   let rArr = []
   for (let i = 0; i < nums.length; i++){
@@ -96,19 +96,6 @@ function evenFinder(nums){
   }
   return rArr
 }
-
-// function evenFinder(nums) {
-//   let arr = []
-//   for (let i = 0; i <
-// nums.length; i++) {
-//  if ((nums[i]) % 2 === 0 ) {
-//    arr.push (nums[1])
-// }
-
-
-
-
-
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
@@ -127,7 +114,8 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 /*
   Write a function called divider that is given one argument, numbersArray.
-  Have divider return an array with the first item in the array being the evens array (all the even values from numbersArray)
+  Have divider return an array with the first item in the array being the evens array 
+  (all the even values from numbersArray)
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
