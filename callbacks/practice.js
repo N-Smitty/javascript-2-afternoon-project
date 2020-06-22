@@ -121,38 +121,31 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
-function uniq (arr, cb) {
-  newArr = [];
-  for(i=0; i<=arr.length-1; i++) {
-    for(j=i+1; j<arr.length-2; j++) {
-      if(arr[i]===arr[j]) {
-        arr.splice(arr[i]);
+
+function uniq(arr, cb) {
+  for(let i = 0; i < arr.length; i++) {
+    for(let m = arr.length -1; m > i; m--) {
+      if(arr[i] === arr[m]) {
+        arr.splice(m, 1)
       }
     }
   }
-  cb(arr);
+      cb(arr)
 }
 
-// function uniq(arr, cb) {
-
-//   for(let i = 0; i < arr.length; i++) {
-//     for(let m = arr.length -1; m > i; m--) {
-//       if(arr[i] === arr[m]) {
-//         arr.splice(m, 1)
+// function uniq (arr, cb) {
+//   newArr = [];
+//   for(i=0; i<=arr.length; i++) {
+//     for(j=i; j<arr.length-1; j--) {
+//       if(arr[i]===arr[j]) {
+//         arr.splice(arr[i]);
 //       }
 //     }
 //   }
-//       cb(uniq)
+//   cb(newArr);
 // }
-// const uniq = (arr, cb) => {
-//   let newArr = []
-//     for (let i= 0; i < arr.length; i++) {
-//       if (arr.indexOf(arr[1]) === i) {
-//         newArr.push(arr[1])
-//       }
-//     }
-//           return cb(newArr)         
-// }
+
+
 // Do not edit the code below.
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
